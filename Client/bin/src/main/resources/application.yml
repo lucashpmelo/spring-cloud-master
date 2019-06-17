@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream, info, health
+
+spring:
+  application:
+    name: WRITING
+server:
+  port: 0
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    metadata:
+      cluster: WRITING
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
