@@ -6,7 +6,7 @@
 
     <groupId>Eureka</groupId>
     <artifactId>Eureka</artifactId>
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Client</module>
